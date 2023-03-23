@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+	<meta charset="UTF-8"/>	
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body>
+    <div class="limiter">
+		<!-------------TOP LINE-------------->
+        <div >
+            <a>
+			    <img src="images/logo.png" width="100" style="margin: 15px 10px 15px 10px"/>
+            </a>
+            <ul class="" style=" float: right; ">
+                <li class="top_line_list" >
+					<a class="top_line_button" style="color:#478ac9">Home</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="About.html" >About</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="Contact.html" >Contact</a>
+                </li>
+				<li class="top_line_list">
+                    <a class="top_line_button" onclick="exit()" ><img src="images/logout.png" style="margin-bottom: -5px;"> Exit</a>
+                </li>
+            </ul>
+         </div>
+        <!------------------------------------->
+
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div >
+					<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="images/data.json" background="#ffffff" speed="1"  style="width: 300px; height: 300px; padding-right: 30px;" hover loop autoplay></lottie-player>
+				</div>
+
+				<form action="javascript:gotowizard()">
+					<span class="login100-form-title" style="padding-bottom: 30px;">
+						<h3 id="lab_welcome"></h3>
+					</span>
+
+					<div class="wrap-input100 validate-input">
+                        <input type="number" name="your_hashnum" id="your_hashnum" class="input100" placeholder="Hash number of wizard"/>
+					</div>
+					<div class="container-login100-form-btn">
+                        <input type="submit" name="gotowizard" id="gotowizard"  class="login100-form-btn" value="Go To Wizard" onclick=""/>
+					</div>
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+                            <a href="allwizard.html" class="signup-image-link">Go to list wizards</a>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/pageuser.js"></script>
+	<script>
+		if(getCookie("usertype")!="USER"){
+			window.location.href = "login.html";
+		}
+	</script>
+</body>
+</html>

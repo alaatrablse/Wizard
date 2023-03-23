@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head >
+    <title>Login</title>
+	<meta charset="UTF-8"/>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body>
+    <div class="limiter">
+		<!-------------TOP LINE-------------->
+        <div >
+            <a>
+			    <img src="images/logo.png" width="100" style="margin: 15px 10px 15px 10px"/>
+            </a>
+            <ul class="" style=" float: right; ">
+                <li class="top_line_list" >
+                    <a class="top_line_button" href="home.html" >Home</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="About.html" >About</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="Contact.html" >Contact</a>
+                </li>
+            </ul>
+         </div>
+        <!------------------------------------->
+
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div >
+					<img src="images/signin-image.jpg" alt="IMG"/>
+				</div>
+
+				<form action="javascript:login()">
+					<span class="login100-form-title">
+						Member Login
+					</span>
+
+					<div class="wrap-input100 validate-input">
+                        <input type="text" name="your_name" id="your_email" class="input100" placeholder="Your email"/>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input type="password" name="your_pass" id="your_pass" class="input100" placeholder="Password"/>
+					</div>
+					
+					<div class="container-login100-form-btn">
+                        <input type="submit" name="signin" id="signin"  class="login100-form-btn" value="Log in" onclick=""/>
+					</div>
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+                            <a href="registr.html" class="signup-image-link">sing up</a>
+						</a>
+					</div>
+					<div id="theDiv" style="padding-top:10px;padding-left:10px">
+						<!-- <h3 style="color:red" >
+                            Username/Password Invalid !!
+                        </h3> -->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/login.js"> </script>
+</body>
+</html>

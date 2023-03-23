@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+	<meta charset="UTF-8"/>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	
+</head>
+<script src="js/registr.js"></script>
+<body>
+    <div class="limiter">
+		<!-------------TOP LINE-------------->
+        <div >
+            <a>
+			    <img src="images/logo.png" width="100" style="margin: 15px 10px 15px 10px"/>
+            </a>
+            <ul class="" style=" float: right; ">
+                <li class="top_line_list" >
+                    <a class="top_line_button" href="home.html" >Home</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="About.html" >About</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="Contact.html" >Contact</a>
+                </li>
+            </ul>
+         </div>
+        <!------------------------------------->
+
+		<div class="container-login100">
+			<div class="wrap-login100">
+				
+
+				<form onsubmit ="return ss()">
+					<span class="login100-form-title" style="padding-bottom: 30px">
+						Sign up
+					</span>
+					<div class="wrap-input100 validate-input">
+						<label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+						<input type="text" name="your_name" id="your_name" class="input100" placeholder="Your Name" required/>
+					</div>
+					<div  class="wrap-input100 validate-input" data-validate = "Password is required" >
+						<label for="email"><i class="zmdi zmdi-email"></i></label>
+						<input type="email" name="email" id="email" class="input100" placeholder="Your Email" required/>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<label for="pass"><i class="zmdi zmdi-lock"></i></label>
+						<input type="password" name="pass" id="pass" class="input100" placeholder="Password" required/>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+						<input type="password" name="re_pass" id="re_pass" class="input100" placeholder="Repeat your password" required/>
+					</div>
+					<div class="container-login100-form-btn">
+                        <input type = "submit" name="signin" id="signin"  class="login100-form-btn" value="Log in" required/>
+					</div>
+
+					<div id="theDiv" style="padding-top:10px;padding-left:10px">
+						<!-- <h3 style="color:red" >
+                            Username/Password Invalid !!
+                        </h3> -->
+					</div>
+				</form>
+				<div >
+					<img src="images/signup-image.jpg" alt="IMG" style="margin-top: 40px; margin-left: 30px;"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

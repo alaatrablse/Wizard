@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Login</title>
+	<meta charset="UTF-8"/>	
+	
+    <link rel="stylesheet" type="text/css" href="css/show/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/show/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="css/show/main.css">
+    <link rel="stylesheet" type="text/css" href="css/show/show.css"/>
+</head>
+<body>
+    <div class="limiter">
+		<!-------------TOP LINE-------------->
+        <div >
+            <a>
+			    <img src="images/logo.png" width="100" style="margin: 15px 10px 15px 10px"/>
+            </a>
+            <ul class="" style=" float: right; ">
+                <li class="top_line_list" >
+                    <a class="top_line_button" href="pageusercreator.html" >Home</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="About.html" >About</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" href="Contact.html" >Contact</a>
+                </li>
+                <li class="top_line_list">
+                    <a class="top_line_button" onclick="exit()" ><img src="images/logout.png" style="margin-bottom: -5px;"> Exit</a>
+                </li>
+            </ul>
+        </div>
+        <!------------------------------------->
+
+		<div class="container-login100"  >
+			<div class="wrap-login100" >
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="statistics-details d-flex align-items-center justify-content-between">
+              <div>
+                <p class="statistics-title">Number of answer</p>
+                <h3 class="rate-percentage" id="numWizardCreator">0</h3>
+              </div>
+            </div>
+            <div  style="justify-content: space-between !important;border-bottom: 1px solid #dee2e6 !important;margin-top: 15px;">
+            </div>
+            <div class="statistics-details d-flex align-items-center justify-content-between">
+              <div style="margin-top: 20px;">
+                <h5 class="statistics-title">Number of answer</h5>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="table100 ver5 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Name</th>
+									<th class="cell100 column2">Email</th>
+									<th class="cell100 column3">Answer</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody id="Answer">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/showjs/jquery-3.2.1.min.js"></script>
+	<script src="js/showjs/perfect-scrollbar.min.js"></script>
+    <script src="js/showjs/answer.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+</body>
+</html>

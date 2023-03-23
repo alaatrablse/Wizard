@@ -1,0 +1,124 @@
+h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+
+h6 {
+    word-wrap: break-word;
+    position: relative;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 74px 0 0;
+    font-size: 0.875rem;
+}
+
+.layout > * {
+    max-height: 100%;
+    min-height: fit-content;
+}
+
+.layout {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.first-limiter {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 675px;
+    margin-left: 205px;
+}
+
+.first-background {
+    color: #ffffff;
+    background-color: #db545a;
+    width: 764px;
+    height: 280px;
+    margin: 80px auto 0 0;
+}
+
+.contener-div-img {
+    border: 0px solid transparent;
+    position: relative;
+    display: flex;
+    background-clip: padding-box;
+    background-origin: padding-box;
+    flex: 0 0 50%;
+    max-width: 49%;
+    margin: 22px auto 0 0;
+}
+
+.div-img {
+    min-height: 624px;
+    background-image: url("images/rrr.jpg");
+    background-position: 50% 50%;
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-left: 10px;
+    margin: -20px;
+    margin-bottom: 0px;
+}
+
+.first-img {
+    overflow: visible;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 411px;
+}
+
+.firsr-btn {
+    color: #ffffff;
+    background-color: #000000;
+    display: table;
+    border-style: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 25px auto 0;
+    padding: 10px 50px 10px 48px;
+}
+
+.first-paragraph {
+    line-height: 1.8;
+    margin: 25px 0 0;
+}
+
+.contener-dive-strat {
+    text-align: center;
+    flex: 0 0 50%;
+    max-width: 49%;
+    color: #111111;
+    background-color: #ffffff;
+    min-height: 624px;
+}
+
+.dive-strat {
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    padding: 30px;
+    padding-left: 20px;
+    padding-right: 20px
+}

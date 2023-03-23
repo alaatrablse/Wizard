@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddWizard</title>
+    <link rel="stylesheet" href="css/addWizard.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <style>
+      .top_line_list {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      padding: 0;
+      margin: 10px;
+      text-align: center;
+      }
+
+      .top_line_button {
+        padding: 10px 20px;
+        color: #111111;
+        display: block;
+        font-size: inherit;
+        font-family: inherit;
+        text-decoration: none;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body, html {
+        height: 100%;
+        font-family: Poppins-Regular, sans-serif;
+      }
+      a {
+        font-family: Poppins-Regular;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #666666;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body class="u-body u-xl-mode">
+	<header>
+    <!-------------TOP LINE-------------->
+    <div style="min-width:601px;" >
+      <a>
+        <img src="images/logo.png" width="100" style="margin: 15px 10px 15px 10px"/>
+      </a>
+      <ul class="" style=" float: right; ">
+          <li class="top_line_list" >
+              <a class="top_line_button" href="pageusercreator.html" >Home</a>
+          </li>
+          <li class="top_line_list">
+              <a class="top_line_button" href="About.html" >About</a>
+          </li>
+          <li class="top_line_list">
+              <a class="top_line_button" href="Contact.html" >Contact</a>
+          </li>
+          <li class="top_line_list">
+            <a class="top_line_button" onclick="exit()" ><img src="images/logout.png" style="margin-bottom: 6px;"> Exit</a>
+          </li>
+      </ul>
+   </div>
+  <!------------------------------------->
+	</header>
+    <section class="" id="main-sec" style=" color: #111111;background-color: #e9f2fa;min-width:601px;max-width: 1900px;" >
+      <div class="u-clearfix u-sheet u-sheet-1"  >
+        <div class=" u-form-1" style="padding: 20px 0px 20px 0px;margin: auto;max-width: 600px;">
+          <form action="#" method="POST" class="" style="padding: 9px;" source="custom" name="form">
+            <div style="margin-bottom: 10px;padding-left: 10px; width: 100%;">
+              <input type="text" placeholder="Tetel" id="title-wizard" name="name" class="inputxx">
+            </div>
+            <div style="margin-bottom: 10px;padding-left: 10px; width: 100%;">
+              <textarea placeholder="Description" rows="2" cols="50" id="des-wizard" name="message" class="inputxx"></textarea>
+            </div>
+            <div style="margin-bottom: 10px;padding-left: 10px; width: 100%;">
+              <div style="position: relative;">
+                <select id = "myList" name="select-1" class="inputxx selectx" style="width: 60%;" onchange = "favTutorial()">
+                  <option value="number page">Select you page</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="43%" height="12" version="1" class="caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+                <button id="addPage" type="button" class="but-add">Add Page</button>
+              </div>
+            </div>
+            <div style="margin-bottom: 10px;padding-left: 10px; width: 100%;">
+              <div style="position: relative;">
+                <select name="select" id="typeWizardChoice" class="inputxx selectx" onchange = "SelectType()">
+                  <option value="LABEL">LABEL</option>
+                  <option value="TextBox">TextBox</option>
+                  <option value="CheckBox">CheckBox</option>
+                  <option value="IMAGE">IMAGE</option>
+                  <option value="MultiLine Free Text">MultiLine Free Text</option>
+                  <option value="RadioButtons List">RadioButtons List</option>
+                  <option value="CheckBox List">CheckBox List</option>
+                  <option value="ListBox List">ListBox List</option>
+                  <option value="Images Selection List">Images Selection List</option>
+                  <option value="SecuredInput">SecuredInput</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+			        </div>
+            </div>
+            <div style="margin-bottom: 10px;padding-left: 10px; width: 100%;" id="indexs">
+              <input type="text" placeholder="Index" id="input" name="text" class="inputxx">
+            </div>
+            <div id="div-but" style="text-align: start;margin-bottom: 10px;padding-left: 10px;padding-top:8px ;">
+              <button id="addElement" type="button" class="but-add" style="margin: 0; margin-top: -6px;" onclick="AddElement()">Add element</button>
+            </div>
+            <div style="display: none;position: absolute;bottom: 0px;left: 0px;width: 100%;text-align: center;color: #fff;padding: 20px 0px 20px 0px;border: none;background: #F95D51;z-index: 1;">Error</div>
+          </form>
+        </div>
+      </div>
+
+
+      <div style="color:#111111;background-color: #e9f2fa;min-width: 600px;">
+        
+        <div class="" style=" display: flex;justify-content: center;">
+          <div class="col-lg-5 d-flex flex-column" style=" flex: 0 0 auto; width: 58.33333%;">
+            <div class="row " style="flex-grow: 1;">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card card-rounded" id="tabel-z" >
+                  <div class="card-body">
+                    <table class="table ">
+                      <thead>
+                        <tr>
+                        <th>type</th>
+                        <th>index</th>
+                        <th>numPage</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                      </thead>
+                      <tbody id="wizard-list">
+            
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div style="margin-top: -2px; padding: 15px 0px 25px 0px;">
+          <div class="center">
+            <button class="but-add" onclick="Save_Wizard()">Save Wizard</button>
+            <button class="but-add" onclick="Delete_Wizard()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/wizard2.js"> </script>
+  </body>
+</html>
