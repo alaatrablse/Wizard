@@ -1,12 +1,25 @@
-# Wizard
-The project I am currently working on is similar to one I completed in the past, but with some enhancements to the user experience. Additionally, we have migrated from using the ASP.net API to Node.js and MongoDB for our API needs.
+#   <h1 align="center"> Wizard  </h1>
+<h4 align="center"> A web application for building a data collection and analysis model</h4>
 
 
-The subject of the software project: MANAGER WIZARD
-• The software will make it possible to manage a system of WIZARDS
-• WIZARD is a collection of forms that allow users to enter input data into the system and refine them. All forms contain input controls such as: CheckBox, TextBox, LABEL
+<br><br>
 
+## Introduction
+The software aims to facilitate the management of the WIZARD processing system by users. WIZARD consists of a set of models that allow users to input and optimize system data. All models contain input control elements such as CheckBox, TextBox, and LABEL.
+
+HTML, CSS & Bootstrap, and JS were used along with Node.js to program the dynamic user interface. Additionally, Node.js was used to program the REST API, and MongoDB was utilized as the database system for data storage.
+<br><br>
+<br>
 We built a website that allows you to manage a system of WIZARDS, with three users:
-1) user: will fill in the wizard values.
-2) WIZARD CREATOR: will be able to add a wizard, edit and delete a wizard he added.
-3) ADMIN: can view all the results of the wizards, can change the type of user and delete a wizard
+1) **User**: Users are responsible for inputting values into the wizard forms.
+2) **WIZARD CREATOR**: WIZARD CREATOR has the privilege to add new wizards, edit existing ones, and delete the wizards they added.
+3) **ADMIN**: The ADMIN role has access to view all wizard results. Additionally, admins have the authority to modify user roles and delete wizards from the system.
+
+<br><br><br><br>
+
+## The database model - graphic scheme
+<br><br>
+<p align="center"> 
+   <img src="https://github.com/alaatrablse/Wizard/assets/84917985/675ce43f-d9e2-419e-83cf-f3a7e0383b4e" align="center" width="80%" />
+</p>
+
