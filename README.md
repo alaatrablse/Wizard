@@ -5,9 +5,10 @@
 <br><br>
 
 ## Introduction
-The software aims to facilitate the management of the WIZARD processing system by users. WIZARD consists of a set of models that allow users to input and optimize system data. All models contain input control elements such as CheckBox, TextBox, and LABEL.
+WIZARD is a system designed for form management. It comprises a collection of models enabling users to input and refine data within the system, with each model containing input control elements such as CheckBoxes, TextBoxes, and Labels. 
 
-HTML, CSS & Bootstrap, and JS were used along with Node.js to program the dynamic user interface. Additionally, Node.js was used to program the REST API, and MongoDB was utilized as the database system for data storage.
+HTML, CSS, and JS, along with Node.js, were utilized to craft the dynamic user interface. Additionally, Node.js was employed for REST API programming, while MongoDB served as the data storage solution. 
+
 <br><br>
 <br>
 We built a website that allows you to manage a system of WIZARDS, with three users:
